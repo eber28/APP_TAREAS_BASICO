@@ -4,7 +4,7 @@ function mostrarMensaje(){
 
 function capturaTexto(){
     let input=document.querySelector("#nuevaTarea")
-    if (input.value==""){
+    if (input.value===""){
         alert("el input debe tener wtexto")
         return
     }
@@ -26,7 +26,12 @@ function capturaTexto(){
     li.appendChild(button)
     //le agremos como hijo el li al elemento padre ul
     ul.appendChild(li)
-
+ 
+    //esta linea de codigo limpia mi input
     document.querySelector("#nuevaTarea").value=""
+
+    //esta linea hacer focus en el input, lo mantienen activo listo para poder ingresar otro texto
+    input.focus()
+
 }
 
